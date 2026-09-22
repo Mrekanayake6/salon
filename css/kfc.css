@@ -1,0 +1,614 @@
+
+
+:root {
+    --bg: #f8f7f4;
+    --surface: #ffffff;
+    --text: #191919;
+    --muted: #777777;
+    --border: #e8e5df;
+
+    --google-blue: #4285f4;
+    --google-green: #34a853;
+    --google-yellow: #fbbc05;
+    --google-red: #ea4335;
+
+    --star: #f5b301;
+
+    --radius-lg: 24px;
+    --radius-md: 16px;
+
+    --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.07);
+
+    --transition:
+        all 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.reviews-section {
+    padding: 100px 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: var(--google-blue);
+}
+
+.section-heading h1 {
+    margin: 0 0 15px;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   PLACE SUMMARY
+========================================================= */
+
+.place-summary {
+    max-width: 1050px;
+
+    margin: 0 auto 35px;
+
+    padding: 28px 32px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   GOOGLE BADGE
+========================================================= */
+
+.google-badge {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #f5f5f5;
+}
+
+.google-g {
+    font-size: 32px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--google-blue) 25%,
+            var(--google-red) 25%,
+            var(--google-red) 50%,
+            var(--google-yellow) 50%,
+            var(--google-yellow) 75%,
+            var(--google-green) 75%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* =========================================================
+   PLACE INFO
+========================================================= */
+
+.place-info {
+    flex: 1;
+}
+
+.place-info h2 {
+    margin: 0 0 5px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.place-info p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating-box {
+    text-align: right;
+}
+
+.rating-number {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.rating-number span:first-child {
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+.rating-star {
+    color: var(--star);
+
+    font-size: 24px;
+}
+
+.rating-stars {
+    margin-top: 2px;
+
+    color: var(--star);
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+.review-count {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   REVIEWS GRID
+========================================================= */
+
+.reviews-grid {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.review-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    padding: 25px;
+
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   REVIEW HEADER
+========================================================= */
+
+.review-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 17px;
+}
+
+.author-photo {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background: #eeeeee;
+}
+
+.author-details {
+    flex: 1;
+}
+
+.author-name {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.author-name:hover {
+    text-decoration: underline;
+}
+
+.review-time {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REVIEW RATING
+========================================================= */
+
+.review-rating {
+    color: var(--star);
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.review-text {
+    margin: 0;
+
+    color: #4e4e4e;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   GOOGLE LABEL
+========================================================= */
+
+.review-source {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.review-source-icon {
+    font-weight: 800;
+
+    font-size: 15px;
+
+    color: var(--google-blue);
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-state {
+    grid-column: 1 / -1;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+.loading-state .spinner-border {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 15px;
+
+    color: var(--google-blue);
+}
+
+.loading-state p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-state {
+    grid-column: 1 / -1;
+
+    padding: 40px;
+
+    background: #fff;
+
+    border: 1px solid #f0d5d5;
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+}
+
+.error-state i {
+    color: var(--google-red);
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.error-state h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.error-state p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   GOOGLE FOOTER
+========================================================= */
+
+.google-footer {
+    max-width: 1050px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.google-logo-text {
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.google-logo-text span {
+    color: var(--google-blue);
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+========================================================= */
+
+.google-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    background: var(--text);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.google-button:hover {
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    background: #000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .reviews-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .reviews-section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .place-summary {
+        padding: 22px;
+
+        flex-wrap: wrap;
+    }
+
+    .rating-box {
+        width: 100%;
+
+        padding-top: 15px;
+
+        border-top: 1px solid var(--border);
+
+        text-align: left;
+    }
+
+    .rating-number {
+        justify-content: flex-start;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .google-footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .section-heading h1 {
+        font-size: 38px;
+    }
+
+    .place-summary {
+        border-radius: 18px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+}
+

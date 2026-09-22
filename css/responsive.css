@@ -1,0 +1,138 @@
+@media(max-width:991.98px) {
+    .site-header {
+        background: rgba(255, 253, 249, .96);
+        padding: 13px 0
+    }
+
+    .hero {
+        padding-top: 120px
+    }
+
+    .hero-copy {
+        padding-right: 0;
+        margin-bottom: 45px
+    }
+
+    .hero-media {
+        height: 520px
+    }
+
+    .hero-note {
+        left: 18px
+    }
+
+    .section {
+        padding: 80px 0
+    }
+
+    .split-image {
+        height: 500px
+    }
+
+    .team-card img {
+        height: 390px
+    }
+
+    .booking-content {
+        padding: 28px
+    }
+
+    .date-grid,
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media(max-width:575.98px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .display-title {
+        font-size: 3.4rem
+    }
+
+    .section-title {
+        font-size: 2.8rem
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 125px 0 50px
+    }
+
+    .hero-media {
+        height: 430px
+    }
+
+    .hero-note {
+        left: 10px;
+        bottom: 12px
+    }
+
+    .trustbar {
+        padding: 15px 0
+    }
+
+    .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 14px 0
+    }
+
+    .trust-item:last-child {
+        border-bottom: 0
+    }
+
+    .service-img {
+        height: 280px
+    }
+
+    .split-image {
+        height: 390px
+    }
+
+    .offer-panel {
+        padding: 40px 25px
+    }
+
+    .team-card img {
+        height: 360px
+    }
+
+    .date-grid,
+    .time-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .booking-progress {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .step-dot {
+        min-width: 0;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .booking-content {
+        padding: 22px
+    }
+
+    .auth-panel {
+        padding: 30px 22px
+    }
+
+    .page-hero {
+        padding: 135px 0 65px
+    }
+
+    .cta-section {
+        padding: 75px 0
+    }
+
+    .footer {
+        padding-top: 55px
+    }
+}
